@@ -4,11 +4,10 @@ class Tabelas {
   //  this.conn = conn;
     this.criarAtendimentos(conn);
   }
-
+//data datetime NOT NULL, dataCriacao datetime NOT NULL, 
   criarAtendimentos(conn) {
     const sql = `CREATE TABLE IF NOT EXISTS Atendimentos (id int(11) NOT NULL AUTO_INCREMENT, cliente varchar(50) NOT NULL, 
-      pet varchar(20) DEFAULT NULL, servico varchar(20) NOT NULL, data datetime NOT NULL, dataCriacao datetime NOT NULL, 
-      status varchar(20) NOT NULL, observacoes text, PRIMARY KEY (id)
+      pet varchar(20) DEFAULT NULL, servico varchar(20) NOT NULL, status varchar(20) NOT NULL, observacoes text, PRIMARY KEY (id)
       ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8`;
 
       console.log(conn);
