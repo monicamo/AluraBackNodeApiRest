@@ -7,7 +7,8 @@ module.exports = app => {
 
   app.post('/atendimentos', (req, res) => {
     const atendimento = req.body;
-    Atendimentos.adiciona(atendimento);
-    res.send('Vc esta na rota de atendimentos, esta fazendo um POST!')
+    
+    Atendimentos.adiciona(atendimento, res);
+
   })
 }
