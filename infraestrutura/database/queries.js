@@ -1,5 +1,3 @@
-import { resolve } from "path/posix";
-
 const conexao = require('./conexao');
 
 
@@ -14,3 +12,5 @@ const executeQuery = (query, parametros = '') => {
     });
   }) 
 }
+
+module.exports = executeQuery
